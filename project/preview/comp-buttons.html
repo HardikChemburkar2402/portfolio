@@ -1,0 +1,21 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);font-family:var(--font-sans);color:var(--fg1);-webkit-font-smoothing:antialiased}
+.wrap{padding:22px 24px}
+.row{display:flex;gap:16px;flex-wrap:wrap;align-items:flex-end}
+.cap{font-family:var(--font-mono);font-size:11px;color:var(--fg3);margin-top:7px}
+
+.btn{font-family:var(--font-sans);font-weight:600;font-size:14px;border:0;border-radius:var(--r-pill);padding:11px 22px;cursor:pointer;display:inline-flex;align-items:center;gap:8px}
+.primary{background:var(--accent);color:#fff;box-shadow:var(--shadow-accent)}
+.secondary{background:var(--surface);color:var(--fg1);border:1px solid var(--border-strong)}
+.ghost{background:transparent;color:var(--accent);padding:11px 12px}
+svg{width:16px;height:16px}
+
+</style></head><body><div class="wrap"><div class="row" style="align-items:center;gap:14px">
+  <button class="btn primary"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Download CV</button>
+  <button class="btn secondary">View projects</button>
+  <button class="btn ghost">Contact →</button>
+</div>
+<div class="cap" style="margin-top:14px">Solid pill · outline pill · ghost link</div></div></body></html>

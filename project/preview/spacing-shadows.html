@@ -1,0 +1,19 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);font-family:var(--font-sans);color:var(--fg1);-webkit-font-smoothing:antialiased}
+.wrap{padding:22px 24px}
+.row{display:flex;gap:16px;flex-wrap:wrap;align-items:flex-end}
+.cap{font-family:var(--font-mono);font-size:11px;color:var(--fg3);margin-top:7px}
+
+.b{width:120px;height:74px;background:var(--surface);border-radius:var(--r-md);border:1px solid var(--border)}
+.cell{text-align:center}
+
+</style></head><body><div class="wrap"><div class="row" style="padding:8px 0 18px">
+  <div class="cell"><div class="b" style="box-shadow:var(--shadow-xs)"></div><div class="cap">xs</div></div>
+  <div class="cell"><div class="b" style="box-shadow:var(--shadow-sm)"></div><div class="cap">sm · card</div></div>
+  <div class="cell"><div class="b" style="box-shadow:var(--shadow-md)"></div><div class="cap">md · hover</div></div>
+  <div class="cell"><div class="b" style="box-shadow:var(--shadow-lg)"></div><div class="cap">lg · modal</div></div>
+  <div class="cell"><div class="b" style="box-shadow:var(--shadow-accent);border-color:transparent;background:var(--accent)"></div><div class="cap">accent btn</div></div>
+</div></div></body></html>

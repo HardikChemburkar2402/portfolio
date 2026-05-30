@@ -1,0 +1,19 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);font-family:var(--font-sans);color:var(--fg1);-webkit-font-smoothing:antialiased}
+.wrap{padding:22px 24px}
+.row{display:flex;gap:16px;flex-wrap:wrap;align-items:flex-end}
+.cap{font-family:var(--font-mono);font-size:11px;color:var(--fg3);margin-top:7px}
+
+.badge{display:inline-flex;align-items:center;gap:9px;background:var(--surface);border:1px solid var(--border);border-radius:var(--r-pill);padding:8px 16px;box-shadow:var(--shadow-xs);font-size:13.5px;font-weight:500;color:var(--fg1)}
+.dot{width:9px;height:9px;border-radius:50%;background:var(--led);box-shadow:0 0 0 0 var(--led-ring);animation:p 2s infinite}
+@keyframes p{0%{box-shadow:0 0 0 0 var(--led-ring)}70%{box-shadow:0 0 0 7px rgba(34,197,94,0)}100%{box-shadow:0 0 0 0 rgba(34,197,94,0)}}
+.chip{display:inline-flex;align-items:center;gap:7px;background:var(--accent-soft);color:var(--accent-hover);border-radius:var(--r-pill);padding:6px 13px;font-size:13px;font-weight:600;font-family:var(--font-mono)}
+
+</style></head><body><div class="wrap"><div class="row" style="align-items:center;gap:14px">
+  <span class="badge"><span class="dot"></span> Open to work</span>
+  <span class="chip">Python</span><span class="chip">BioBERT</span><span class="chip">RAG</span>
+</div>
+<div class="cap" style="margin-top:14px">Status badge w/ pulsing LED · mono skill chips</div></div></body></html>

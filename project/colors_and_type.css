@@ -1,0 +1,196 @@
+/* ============================================================
+   Hardik Chemburkar — Portfolio Design System
+   colors_and_type.css
+
+   A clean, light, data-driven, premium-minimalist system.
+   Slate neutrals + a single professional blue accent.
+   Humanist grotesk for UI/display, technical mono for labels.
+   ============================================================ */
+
+/* ---- Webfonts (Google Fonts) --------------------------------
+   Hanken Grotesk  -> humanist grotesk, Calibre-adjacent (display + body)
+   JetBrains Mono  -> technical mono for section numbers, labels, metrics
+   Loaded here so colors_and_type.css is self-sufficient.        */
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  /* ---------- TYPE FAMILIES ---------- */
+  --font-sans: 'Hanken Grotesk', -apple-system, system-ui, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', 'SF Mono', 'Fira Code', monospace;
+
+  /* ---------- BASE COLOR TOKENS ---------- */
+  /* Surfaces */
+  --bg:          #f8fafc;   /* slate-50  — page background (off-white) */
+  --surface:     #ffffff;   /* white     — cards, dock, panels */
+  --surface-2:   #f1f5f9;   /* slate-100 — inset / hover wells */
+
+  /* Foreground text */
+  --fg1:         #0f172a;   /* slate-900 — headings, primary text */
+  --fg2:         #475569;   /* slate-600 — body, secondary text */
+  --fg3:         #94a3b8;   /* slate-400 — muted, captions, meta */
+
+  /* Lines & borders */
+  --border:      #e2e8f0;   /* slate-200 — hairlines, card borders */
+  --border-strong:#cbd5e1;  /* slate-300 — inputs, dividers on hover */
+
+  /* Accent — professional blue */
+  --accent:      #2563eb;   /* blue-600  — primary actions, links, data */
+  --accent-hover:#1d4ed8;   /* blue-700  — hover/press */
+  --accent-soft: #dbeafe;   /* blue-100  — tints, chips, highlights */
+  --accent-tint: rgba(37, 99, 235, 0.08); /* wash behind active states */
+  --accent-fg:   #ffffff;   /* text on accent */
+
+  /* Dark pill (floating-dock active indicator) */
+  --ink:         #0f172a;   /* slate-900 — gliding active pill */
+  --ink-fg:      #ffffff;
+
+  /* Status / semantic */
+  --led:         #22c55e;   /* emerald-500 — "open to work" pulsing dot */
+  --led-ring:    rgba(34, 197, 94, 0.35);
+  --positive:    #16a34a;   /* green-600  — gains, +accuracy deltas */
+  --warning:     #d97706;   /* amber-600 */
+
+  /* Glass (hero scroll panel) */
+  --glass-bg:    rgba(248, 250, 252, 0.72);
+  --glass-border:rgba(226, 232, 240, 0.8);
+  --glass-blur:  12px;
+
+  /* ---------- TYPE SCALE ---------- */
+  --fz-xxs: 12px;
+  --fz-xs:  13px;
+  --fz-sm:  14px;
+  --fz-md:  16px;
+  --fz-lg:  18px;
+  --fz-xl:  20px;
+  --fz-2xl: 24px;
+  --fz-3xl: 30px;
+  --fz-4xl: 40px;
+  --fz-display: clamp(48px, 8vw, 88px);
+
+  --lh-tight: 1.08;
+  --lh-snug:  1.25;
+  --lh-body:  1.6;
+
+  --tracking-label: 0.14em; /* uppercase mono labels */
+  --tracking-tight: -0.02em;/* large display headings */
+
+  /* ---------- SPACING (4px base) ---------- */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 20px;
+  --sp-6: 24px;
+  --sp-8: 32px;
+  --sp-10: 40px;
+  --sp-12: 48px;
+  --sp-16: 64px;
+  --sp-20: 80px;
+  --sp-24: 96px;
+
+  /* ---------- RADII ---------- */
+  --r-xs:  6px;
+  --r-sm:  10px;
+  --r-md:  14px;
+  --r-lg:  20px;
+  --r-xl:  28px;
+  --r-pill: 999px;
+
+  /* ---------- SHADOWS (soft, premium) ---------- */
+  --shadow-xs: 0 1px 2px rgba(15, 23, 42, 0.05);
+  --shadow-sm: 0 2px 8px -2px rgba(15, 23, 42, 0.08);
+  --shadow-md: 0 8px 24px -8px rgba(15, 23, 42, 0.12);
+  --shadow-lg: 0 20px 48px -16px rgba(15, 23, 42, 0.18);
+  --shadow-pill: 0 6px 20px -4px rgba(15, 23, 42, 0.16);
+  --shadow-accent: 0 8px 20px -6px rgba(37, 99, 235, 0.45);
+
+  /* ---------- MOTION ---------- */
+  /* Carried over from bchiang7/v4 — the signature easing */
+  --easing: cubic-bezier(0.645, 0.045, 0.355, 1);
+  --spring: cubic-bezier(0.34, 1.56, 0.64, 1); /* gentle overshoot for layout pills */
+  --t-fast: 0.18s var(--easing);
+  --t-base: 0.28s var(--easing);
+  --t-slow: 0.5s var(--easing);
+}
+
+/* ============================================================
+   SEMANTIC TYPE ROLES
+   Apply these classes (or copy the declarations) for consistent type.
+   ============================================================ */
+
+.ds-display {
+  font-family: var(--font-sans);
+  font-weight: 800;
+  font-size: var(--fz-display);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-tight);
+  color: var(--fg1);
+}
+
+.ds-h1 {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: var(--fz-4xl);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-tight);
+  color: var(--fg1);
+}
+
+.ds-h2 {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: var(--fz-3xl);
+  line-height: var(--lh-snug);
+  color: var(--fg1);
+}
+
+.ds-h3 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: var(--fz-2xl);
+  line-height: var(--lh-snug);
+  color: var(--fg1);
+}
+
+.ds-lead {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: var(--fz-xl);
+  line-height: var(--lh-body);
+  color: var(--fg2);
+}
+
+.ds-body {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: var(--fz-md);
+  line-height: var(--lh-body);
+  color: var(--fg2);
+}
+
+.ds-small {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: var(--fz-sm);
+  line-height: 1.5;
+  color: var(--fg3);
+}
+
+/* Mono accent label — the signature "01." / "// SUMMARY" motif,
+   adapted from bchiang7/v4's overline + numbered-heading. */
+.ds-label {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: var(--fz-xs);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+/* Monospace metric / data figure */
+.ds-mono {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  color: var(--fg1);
+  font-variant-numeric: tabular-nums;
+}

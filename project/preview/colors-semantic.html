@@ -1,0 +1,22 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);font-family:var(--font-sans);color:var(--fg1);-webkit-font-smoothing:antialiased}
+.wrap{padding:22px 24px}
+.row{display:flex;gap:14px;flex-wrap:wrap}
+.sw{border-radius:var(--r-md);border:1px solid var(--border);overflow:hidden;background:var(--surface)}
+.chip{height:64px}
+.meta{font-family:var(--font-mono);font-size:11px;color:var(--fg3);padding:7px 9px;line-height:1.4}
+.meta b{display:block;color:var(--fg1);font-weight:500;font-size:12px;text-transform:none}
+
+.led{display:inline-flex;align-items:center;gap:9px;font-size:13px;color:var(--fg2)}
+.dot{width:11px;height:11px;border-radius:50%;background:var(--led);box-shadow:0 0 0 4px var(--led-ring)}
+
+</style></head><body><div class="wrap"><div class="row" style="align-items:center">
+  <div class="sw"><div class="chip" style="background:var(--led)"></div><div class="meta"><b>LED</b>#22C55E</div></div>
+  <div class="sw"><div class="chip" style="background:var(--positive)"></div><div class="meta"><b>Positive</b>#16A34A</div></div>
+  <div class="sw"><div class="chip" style="background:var(--warning)"></div><div class="meta"><b>Warning</b>#D97706</div></div>
+  <div class="sw" style="min-width:200px"><div class="chip" style="background:var(--glass-bg);backdrop-filter:blur(8px);box-shadow:inset 0 0 0 1px var(--glass-border)"></div><div class="meta"><b>Glass panel</b>slate-50 @72% + blur 12px</div></div>
+</div>
+<div style="margin-top:16px" class="led"><span class="dot"></span> Open to work — pulsing LED</div></div></body></html>
