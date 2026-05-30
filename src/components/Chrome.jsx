@@ -13,7 +13,7 @@ export function StatusBadge() {
 
 export function DownloadCV() {
   return (
-    <a className="cv-btn" href="#" onClick={(e) => e.preventDefault()}>
+    <a className="cv-btn" href="/portfolio/Hardik_Chemburkar_Resume.pdf" download="Hardik_Chemburkar_Resume.pdf">
       <Icon name="download" size={16} stroke="#fff" />
       Download CV
     </a>
